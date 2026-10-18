@@ -7,16 +7,21 @@
 @media (max-width:950px){.services-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr);gap:35px}.step:not(:last-child):after{display:none}.pricing{grid-template-columns:1fr}.price-card.featured{transform:none}.about-grid,.contact-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.nav-links,.nav-cta{display:none}.menu-toggle{display:block}.mobile-nav{position:fixed;inset:0;background:rgba(248,250,252,.97);backdrop-filter:blur(20px);display:none;align-items:center;justify-content:center;z-index:45}.mobile-nav.open{display:flex}.mobile-nav-inner{display:grid;gap:20px;text-align:center;font-family:'Space Grotesk';font-size:30px}.mobile-nav-inner a{color:var(--deep)}}
 @media (max-width:650px){.container{width:min(100% - 28px,1160px)}.hero{min-height:720px;padding-top:130px}.hero h1{font-size:48px}.hero p{font-size:16px}.section{padding:75px 0}.services-grid,.project-grid,.process{grid-template-columns:1fr}.cta-inner{padding:45px 25px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column}.cursor-glow{display:none}.page-hero{padding-top:140px}}
 .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.project-media--wedding,.project-media--dice{display:grid;place-items:center}
+.project-media--wedding,.project-media--dice,.project-media--brewlane{display:grid;place-items:center}
 .project-media--wedding{background:linear-gradient(135deg,#f4f0e6,#e9e3d4)}
 .project-media--wedding:before{width:176px;height:176px;left:auto;top:auto;border:1px solid rgba(113,119,83,.3);transform:none}
 .project-media--dice{background:radial-gradient(ellipse at center,#6b503b,#342820)}
 .project-media--dice:before{width:158px;height:158px;left:auto;top:auto;border:1px solid rgba(239,211,165,.3);transform:rotate(45deg)}
+.project-media--brewlane{background:linear-gradient(135deg,#e6c8a5,#9a6742 55%,#50372b)}
+.project-media--brewlane:before{width:176px;height:176px;left:auto;top:auto;border:1px solid rgba(255,240,220,.38);transform:rotate(45deg)}
 .project-logo{position:relative;z-index:1}
 .project-logo--wedding{display:flex;align-items:baseline;justify-content:center;gap:9px;color:#64704f;font-family:'Space Grotesk',serif;font-size:50px;letter-spacing:-.08em}
 .project-logo-amp{font-family:Georgia,serif;font-size:25px;font-style:italic}
 .project-logo-caption{flex-basis:100%;margin-top:4px;text-align:center;font-family:Manrope,sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em}
 .project-logo--dice{display:grid;justify-items:center;gap:4px;color:#f0d6ad}
+.project-logo--brewlane{display:grid;justify-items:center;gap:7px;color:#fff0dc}
+.project-logo--brewlane .project-logo-name{font-size:25px;letter-spacing:.2em}
+.project-logo--brewlane .project-logo-caption{margin-top:0;font-size:8px;letter-spacing:.2em}
 .project-logo--dice svg{width:54px;height:54px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .project-logo--dice svg circle{fill:currentColor;stroke:none}
 .project-logo-name{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;letter-spacing:.14em}
