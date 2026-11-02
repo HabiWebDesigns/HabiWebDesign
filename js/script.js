@@ -26,7 +26,7 @@ const habiWidget = document.createElement('aside');
 habiWidget.className = 'habi-widget';
 habiWidget.setAttribute('aria-label', 'A little about Habi');
 habiWidget.innerHTML = `
-    <button class="habi-widget-launcher" type="button" aria-expanded="true" aria-controls="habi-widget-panel">
+    <button class="habi-widget-launcher" type="button" aria-expanded="false" aria-controls="habi-widget-panel">
         <img src="assets/habi-logo-light.png" alt="" class="habi-widget-logo habi-widget-logo--light">
         <img src="assets/habi-logo-dark.png" alt="" class="habi-widget-logo habi-widget-logo--dark">
         <span>A little about Habi</span>
@@ -84,4 +84,4 @@ habiLauncher.addEventListener('click', () => setHabiWidgetOpen(true));
 habiWidget.querySelector('.habi-widget-close').addEventListener('click', () => setHabiWidgetOpen(false));
 habiWidget.querySelector('.habi-widget-next').addEventListener('click', showHabiFact);
 showHabiFact();
-setHabiWidgetOpen(true);
+setHabiWidgetOpen(false);

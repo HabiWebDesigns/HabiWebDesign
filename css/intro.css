@@ -1,0 +1,36 @@
+html.intro-pending{overflow:hidden}
+html.intro-pending body{overflow:hidden}
+.intro-screen{position:fixed;inset:0;z-index:1000;display:none;overflow:hidden;align-items:center;justify-content:center;background:#101923;color:#f4f8fc;isolation:isolate}
+.intro-pending .intro-screen{display:flex}
+.intro-screen:before{position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 46%,rgba(46,91,132,.42),transparent 48%),linear-gradient(135deg,#101923,#172b3a 54%,#101923);content:""}
+.intro-screen:after{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(218,236,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(218,236,255,.035) 1px,transparent 1px);background-size:68px 68px;content:"";mask-image:radial-gradient(ellipse at center,#000 12%,transparent 78%)}
+.intro-content{width:min(480px,calc(100% - 44px));text-align:center;animation:intro-content-in .8s cubic-bezier(.2,.75,.2,1) both}
+.intro-brand{display:flex;align-items:center;justify-content:center;gap:14px;animation:intro-brand-in 1s cubic-bezier(.2,.75,.2,1) both}
+.intro-logo{display:block;width:min(250px,70vw);height:auto;object-fit:contain}
+.intro-logo--dark{display:none}
+[data-theme="dark"] .intro-logo--light{display:none}
+[data-theme="dark"] .intro-logo--dark{display:block}
+.intro-tagline{margin:29px 0 33px;color:#c8d7e6;font-family:'Space Grotesk',sans-serif;font-size:clamp(16px,3vw,20px);letter-spacing:.015em;animation:intro-tagline-in .7s .25s ease both}
+.intro-progress{position:relative;width:150px;height:2px;margin:auto;overflow:hidden;background:rgba(212,232,250,.18)}
+.intro-progress span{position:absolute;inset:0 auto 0 -45%;width:42%;background:linear-gradient(90deg,transparent,#9bcbf7,transparent);animation:intro-progress 1.05s ease-in-out infinite}
+.intro-caption{margin:15px 0 0;color:#8da6bd;font-size:10px;letter-spacing:.1em;animation:intro-tagline-in .7s .35s ease both}
+.intro-skip{position:absolute;right:clamp(20px,5vw,58px);bottom:clamp(20px,5vh,42px);display:inline-flex;align-items:center;gap:12px;border:0;background:transparent;color:#c5d7e8;font-size:12px;font-weight:700;letter-spacing:.04em;cursor:pointer;transition:color .2s}
+.intro-skip:hover{color:#fff}
+.intro-skip span{font-size:16px;transition:transform .2s}
+.intro-skip:hover span{transform:translateX(4px)}
+.intro-skip:focus-visible{outline:2px solid #9bcbf7;outline-offset:6px;border-radius:2px}
+.intro-orbit{position:absolute;z-index:-1;width:min(74vw,880px);height:min(48vw,470px);border:1px solid rgba(141,186,240,.12);border-radius:50%;pointer-events:none}
+.intro-orbit--one{transform:rotate(-24deg);animation:intro-orbit 13s ease-in-out infinite alternate}
+.intro-orbit--two{width:min(90vw,1060px);height:min(62vw,610px);transform:rotate(25deg);border-color:rgba(141,186,240,.075);animation:intro-orbit 17s ease-in-out infinite alternate-reverse}
+.intro-leaving .intro-screen{pointer-events:none;animation:intro-curtain-out .68s cubic-bezier(.76,0,.24,1) forwards}
+.intro-leaving .intro-content{animation:intro-content-out .35s ease both}
+@keyframes intro-content-in{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes intro-brand-in{from{opacity:0;clip-path:inset(0 50% 0 50%);transform:translateY(8px)}to{opacity:1;clip-path:inset(0);transform:none}}
+@keyframes intro-tagline-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes intro-progress{to{transform:translateX(350%)}}
+@keyframes intro-orbit{to{transform:rotate(-18deg) translate3d(18px,-10px,0)}}
+@keyframes intro-curtain-out{to{clip-path:inset(0 0 100% 0);visibility:hidden}}
+@keyframes intro-content-out{to{opacity:0;transform:translateY(-10px)}}
+@media(max-width:600px){.intro-logo{width:min(220px,72vw)}.intro-tagline{margin:24px 0 30px}.intro-skip{right:50%;transform:translateX(50%)}.intro-orbit{width:110vw;height:60vw}.intro-orbit--two{width:130vw;height:86vw}}
+@media(prefers-reduced-motion:reduce){.intro-content,.intro-brand,.intro-tagline,.intro-caption,.intro-progress span,.intro-orbit,.intro-skip span{animation:none;transition:none}.intro-leaving .intro-screen{animation:intro-fade-out .15s ease forwards}.intro-leaving .intro-content{animation:none}}
+@keyframes intro-fade-out{to{opacity:0;visibility:hidden}}
