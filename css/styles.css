@@ -143,10 +143,14 @@
 .project-tags .project-tag{display:inline-flex;align-items:center;padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:rgba(91,159,232,.08);font-size:9px;line-height:1.35;letter-spacing:.07em}
 .project-tags .project-tag--non-client{color:var(--muted);background:rgba(141,186,240,.06)}
 .project-tags .project-tag--ongoing{color:#ffd27a;border-color:rgba(235,177,73,.38);background:rgba(190,126,28,.15)}
+.project-tags .project-tag--live{color:#1fa56d;border-color:rgba(31,165,109,.34);background:rgba(22,162,104,.12)}
 .project-status-banner{position:absolute;top:14px;right:14px;z-index:2;display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border:1px solid rgba(241,190,92,.56);border-radius:10px;background:repeating-linear-gradient(135deg,rgba(60,47,27,.94) 0 9px,rgba(42,38,31,.94) 9px 18px);color:#ffe0a0;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 5px 16px rgba(0,0,0,.24)}
+.project-status-banner--live{border-color:rgba(108,231,174,.62);background:linear-gradient(135deg,rgba(7,81,51,.92),rgba(17,112,76,.92));color:#d9ffe8;box-shadow:0 5px 16px rgba(17,112,76,.28)}
 .project-status-banner svg{width:16px;height:16px;fill:rgba(255,208,120,.2);stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.project-status-banner--live svg{fill:rgba(163,255,213,.12)}
 [data-theme="dark"] .project-tags .project-tag{color:#c3d5e8}
 [data-theme="dark"] .project-tags .project-tag--ongoing{color:#ffdc94}
+[data-theme="dark"] .project-tags .project-tag--live{color:#7ee7b4}
 
 @media (max-width:380px){
     .project-status-banner{top:10px;right:10px;padding:6px 8px;font-size:8px}
